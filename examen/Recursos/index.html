@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Turismo en Cusco, Perú</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #222;
+      color: #fff;
+      display: flex;
+    }
+
+    /* Barra lateral */
+    .sidebar {
+      width: 250px;
+      background-color: #111;
+      padding: 20px;
+      height: 100vh;
+      overflow-y: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .sidebar h2 {
+      color: #ffd700;
+      text-align: center;
+    }
+
+    .sidebar nav a {
+      display: block;
+      color: #ffd700;
+      text-decoration: none;
+      margin: 15px 0;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #333;
+    }
+
+    /* Contenido principal */
+    .main-content {
+      margin-left: 270px;
+      padding: 40px;
+      width: 100%;
+    }
+
+    header, footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      display: none;
+      margin-bottom: 60px;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    img {
+      width: 300px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+
+    table, th, td {
+      border: 1px solid #fff;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    form {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    video, audio {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra lateral -->
+  <div class="sidebar">
+    <h2>Menú</h2>
+    <nav>
+      <a onclick="mostrarSeccion('inicio')">Inicio</a>
+      <a onclick="mostrarSeccion('lugares')">Lugares Turísticos</a>
+      <a onclick="mostrarSeccion('multimedia')">Multimedia</a>
+      <a onclick="mostrarSeccion('formulario')">Reservas</a>
+    </nav>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <header>
+      <h1>Bienvenidos a Cusco, Perú</h1>
+    </header>
+
+    <!-- INICIO -->
+    <section id="inicio" class="active">
+      <h2>Descubre Cusco</h2>
+      <p>Cusco es una ciudad mágica ubicada en los Andes peruanos. Fue la capital del Imperio Inca y hoy en día es un importante destino turístico mundial.</p>
+      <ul>
+        <li>Altura: 3,399 msnm</li>
+        <li>Clima: Templado y seco</li>
+      </ul>
+      <ol>
+        <li>Explora sus calles empedradas</li>
+        <li>Disfruta de la gastronomía andina</li>
+      </ol>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Plaza_de_Armas_Cusco.jpg" alt="Cusco">
+    </section>
+
+    <!-- LUGARES -->
+<section id="lugares">
+    <h2 style="text-align: center;">Lugares Turísticos</h2>
+    <div style="text-align: center;">
+      <table style="margin: 0 auto;">
+        <tr><th>Nombre</th><th>Ubicación</th></tr>
+        <tr><td>Machu Picchu</td><td>Valle Sagrado</td></tr>
+        <tr><td>Sacsayhuamán</td><td>Cusco</td></tr>
+        <tr><td>Valle Sagrado</td><td>Urubamba</td></tr>
+        <tr><td>Qorikancha</td><td>Centro Histórico</td></tr>
+        <tr><td>Montaña de 7 Colores</td><td>Vinicunca</td></tr>
+      </table>
+  
+      <div style="margin-top: 30px;">
+        <h3>Machu Picchu</h3>
+        <p>Una de las siete maravillas del mundo moderno, antigua ciudadela inca ubicada en lo alto de los Andes.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Machu_Picchu%2C_Peru.jpg" alt="Machu Picchu">
+  
+        <h3>Sacsayhuamán</h3>
+        <p>Impresionante fortaleza ceremonial de enormes piedras encajadas con precisión.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Sacsayhuaman-panorama-edit.jpg" alt="Sacsayhuamán">
+  
+        <h3>Qorikancha</h3>
+        <p>Templo del Sol, una de las construcciones más sagradas del imperio inca, sobre la cual se construyó el convento de Santo Domingo.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Qorikancha_Temple_of_the_Sun.jpg" alt="Qorikancha">
+  
+        <h3>Montaña de 7 Colores</h3>
+        <p>Famosa por sus colores naturales, esta montaña es una atracción única ubicada en la región de Vinicunca.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Montana_de_7_colores.jpg" alt="Montaña de 7 Colores">
+      </div>
+    </div>
+  </section>
+
+    <!-- MULTIMEDIA -->
+    <section id="multimedia">
+      <h2>Multimedia</h2>
+      <video width="320" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+      <br>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+      </audio>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="formulario">
+      <h2>Formulario de Reservas</h2>
+      <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios"></textarea><br>
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Turismo Cusco</p>
+    </footer>
+  </div>
+
+  <!-- SCRIPT PARA MOSTRAR/OCULTAR SECCIONES -->
+  <script>
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll("section");
+      secciones.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
